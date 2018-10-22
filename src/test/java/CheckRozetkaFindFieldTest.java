@@ -10,12 +10,12 @@ import org.junit.jupiter.api.Test;
 public class CheckRozetkaFindFieldTest {
     @Test
     public void search_field_is_work() {
+        System.setProperty("webdriver.chrome.driver", "D:\\chromedriver\\chromedriver.exe");
         WebDriver browser;
         browser = new ChromeDriver();
         browser.get("https://rozetka.com.ua");
-        System.setProperty("webdriver.chrome.driver", "D:\\chromedriver\\chromedriver.exe");
-        WebElement searchField = browser.findElement(By.xpath("/html[1]/body[1]/header[1]/div[1]/div[1]/div[2]/div[3]/form[1]/div[1]/div[2]/input[1]"));
-        WebElement searchButton = browser.findElement(By.xpath("/html[1]/body[1]/header[1]/div[1]/div[1]/div[2]/div[3]/form[1]/span[1]/span[1]/button[1]"));
+        WebElement searchField = browser.findElement(By.xpath("//input[@placeholder='Поиск']"));
+        WebElement searchButton = browser.findElement(By.xpath("//button[@class='btn-link-i js-rz-search-button']"));
         searchField.sendKeys("компьютер");
         searchButton.sendKeys(Keys.RETURN);
 //        assertTrue((searchField.isDisplayed()));
