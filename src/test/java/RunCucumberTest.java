@@ -5,7 +5,9 @@ import org.junit.runner.RunWith;
 
 public class RunCucumberTest {
     @RunWith(Cucumber.class)
-    @CucumberOptions(plugin = {"pretty"})
+    @CucumberOptions(
+            features = {"src/test/resourses/finder.feature"},
+            glue = {"src/test/java/StepDefinitions"})
     public class RunCukesTest {
     }
 }

@@ -1,5 +1,5 @@
-Feature: Belly
-  Optional description of the feature
+Feature: Computer
+  Find PC on the main page
 
   Scenario: a few cukes
     Given I have 42 cukes in my belly
